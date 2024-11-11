@@ -1,0 +1,38 @@
+<div class="register-container">
+    <!-- Botón de regresar -->
+    <button class="back-button" (click)="goBack()">
+      <img src="assets/icons/back-arrow.svg" alt="Atrás" />
+    </button>
+  
+    <!-- Título -->
+    <h1 class="title">Registrarse</h1>
+  
+    <!-- Pregunta sobre la fecha -->
+    <p class="question">¿Cuál es tu fecha de nacimiento?</p>
+  
+    <!-- Ícono de cumpleaños -->
+    <img src="assets/icons/birthday-cake.svg" alt="Cumpleaños" class="icon" />
+  
+    <!-- Input de fecha -->
+    <div class="form-group">
+      <input
+        type="date"
+        class="form-control"
+        (change)="onDateChange($event)"
+      />
+    </div>
+  
+    <!-- Botón de siguiente -->
+    <button
+      class="btn btn-primary"
+      [disabled]="!birthdate"
+      (click)="goToNextStep()"
+    >
+      Siguiente
+    </button>
+  </div>
+  
+  
+  
+  
+  

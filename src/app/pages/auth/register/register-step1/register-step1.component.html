@@ -1,0 +1,31 @@
+<div class="register-container">
+    <button class="back-button" (click)="goBack()">
+      <img src="./Frame884.svg" alt="Atrás" />
+    </button>
+  
+    <h1>Regístrate en Tiktok</h1>
+  
+    <div class="btn-container">
+      <!-- Botón "Use phone or email" -->
+      <button class="btn btn-primary" (click)="goToNextStep()">
+        <img src="perona.svg" alt="Phone" />
+        Use phone or email
+      </button>
+      <!-- Botón "Continue with Google" -->
+      <button class="btn btn-secondary" (click)="goToNextStep()">
+        <img src="google.svg" alt="Google" />
+        Continue with Google
+      </button>
+    </div>
+  
+    <p class="terms">
+      Al continuar, aceptas nuestros <a href="#">Términos de Servicio</a> y reconoces que has leído nuestra <a href="#">Política de Privacidad</a>.
+    </p>
+  
+    <p class="login">
+      ¿Ya tienes una cuenta? <a (click)="goToLogin()">Inicia sesión</a>
+    </p>
+  </div>
+  
+  
+  
