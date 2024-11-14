@@ -1,1 +1,70 @@
-<p>feed-item works!</p>
+<div class="app-container">
+    <!-- Encabezado -->
+    <header class="app-header">
+      <div class="search-bar">
+        <input type="text" placeholder="Búsqueda" />
+        <span class="icon">🔍</span>
+      </div>
+      <div class="header-right">
+        <button class="login-button">
+          <span class="icon">👤</span> Inicia Sesión
+        </button>
+        <div class="coins">
+          <span>💰</span> <span>0</span>
+        </div>
+      </div>
+    </header>
+  
+    <!-- Contenido principal -->
+    <div class="feed-container">
+      <!-- Barra lateral -->
+      <aside class="sidebar">
+        <ul>
+          <li><a href="#"><span>🏠</span> Inicio</a></li>
+          <li><a href="#"><span>🔍</span> Búsqueda</a></li>
+          <li><a href="#"><span>👤</span> Perfil</a></li>
+        </ul>
+        <p>
+          Inicia sesión para dar me gusta a videos, participar de encuestas y desbloquear películas.
+        </p>
+        <button class="login-button">Inicia sesión</button>
+      </aside>
+  
+      <!-- Video principal -->
+      <main class="main-feed">
+        <div class="video-section">
+          <video [src]="video.url" autoplay loop muted></video>
+  
+          <!-- Controles dentro del video -->
+          <div class="video-description">
+            <p>Sinopsis corta de la película <strong>#pelicula_1</strong> <strong>#pelicula_2</strong></p>
+            <a href="#" class="platform-link">🔗 Plataforma</a>
+            <button class="unlock-button">Desbloquear link</button>
+          </div>
+  
+          <!-- Barra de interacción -->
+          <div class="interaction-bar">
+            <button (click)="likeVideo(video)">
+              <span [class.liked]="video.liked">❤</span>
+              <span class="count">{{ video.likes }}</span>
+            </button>
+            <button (click)="toggleCommentBox()">
+              💬
+              <span class="count">{{ video.comments.length }}</span>
+            </button>
+            <button>🔗</button>
+          </div>
+        </div>
+  
+        <!-- Cuadro de comentarios -->
+        <div class="comments-box" *ngIf="showCommentBox">
+          <input [(ngModel)]="newComment" placeholder="Escribe un comentario" class="comment-input" />
+          <button (click)="addComment()">Comentar</button>
+          <ul>
+            <li *ngFor="let comment of video.comments">{{ comment }}</li>
+          </ul>
+        </div>
+      </main>
+    </div>
+  </div>
+  
