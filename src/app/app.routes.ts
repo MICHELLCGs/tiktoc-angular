@@ -5,6 +5,7 @@ import { RegisterStep2Component } from './pages/auth/register/register-step2/reg
 import { RegisterStep3Component } from './pages/auth/register/register-step3/register-step3.component';
 import { LoginComponent } from './pages/auth/login/login.component';
 import { FeedItemComponent } from './components/feed-item/feed-item.component'; // Importa el componente del feed
+import { ValidacionComponent} from './pages/auth/validacion/validacion.component'
 
 export const routes: Routes = [
   { path: 'register-step1', component: RegisterStep1Component },
@@ -13,6 +14,7 @@ export const routes: Routes = [
   { path: 'feed', component: FeedItemComponent }, // Nueva ruta para el feed
   { path: '', redirectTo: 'register-step1', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
+  { path: 'validacion', component: ValidacionComponent },
 ];
 
 @NgModule({

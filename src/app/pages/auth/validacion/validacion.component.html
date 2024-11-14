@@ -1,0 +1,23 @@
+<div class="verify-card">
+    <img src="assets/logo.svg" alt="Logo" class="logo" />
+
+    <h2>Verifica tu cuenta</h2>
+  
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="verificationCode" placeholder="Introduce el código">Ingresar código de Validación</label>
+        <input type="text" id="verificationCode" [(ngModel)]="verificationCode" name="verificationCode" required placeholder="Introduce el código" />
+      </div>
+  
+      <button type="submit" class="btn-primary" [ngClass]="{'btn-valid': isFormValid()}">Verificar</button>
+    </form>
+  
+    <p class="resend-text">
+      ¿No recibiste el código? <a href="#" (click)="onResendCode()">Reenviar</a>
+    </p>
+  
+    <p class="terms-text">
+      Al continuar, aceptas nuestros <a href="/terms">Términos de Servicio</a> y reconoces que has leído nuestra <a href="/privacy-policy">Política de Privacidad</a> para saber cómo recopilamos, usamos y compartimos tus datos, y nuestra <a href="/cookie-policy">Política de Cookies</a> para saber cómo usamos las cookies.
+    </p>
+  </div>
+  

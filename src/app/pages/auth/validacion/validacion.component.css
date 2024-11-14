@@ -1,17 +1,15 @@
 /* Container styles */
-.login-card {
+.verify-card {
     max-width: 400px;
     width: 90%;
-    /* Quitamos el margin superior que estaba creando el espacio */
     margin: 0 auto;
     padding: 2rem;
     background: white;
-    /* Quitamos el border-radius que creaba las esquinas redondeadas */
     border-radius: 0 0 8px 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* El resto del CSS permanece igual */
+/* Logo styles */
 .logo {
     display: block;
     width: 60px;
@@ -20,6 +18,9 @@
 }
 
 /* Form group styles */
+form{
+    margin-bottom: 50%;
+}
 .form-group {
     margin-bottom: 1.5rem;
 }
@@ -45,32 +46,7 @@
     border-color: #ff6b6b;
 }
 
-/* Phone input group */
-.phone-group {
-    display: flex;
-    align-items: center;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    padding: 0.75rem;
-}
-
-.phone-group input {
-    border: none;
-    padding: 0;
-    margin-left: 0.5rem;
-}
-
-.phone-group input:focus {
-    outline: none;
-}
-
-.country-code {
-    color: #666;
-    font-size: 1rem;
-}
-
 /* Button styles */
-/* Estilo predeterminado del botón */
 .btn-primary {
     width: 100%;
     padding: 0.75rem;
@@ -90,64 +66,45 @@
     color: #FFFFFF;
 }
 
-
-
-/* Google button */
-.btn-google {
-    width: 100%;
-    padding: 0.75rem;
-    background-color: white;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    color: #333;
-    font-size: 1rem;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 7rem;
-    margin-bottom: 1rem;
-}
-
-.btn-google img {
-    width: 18px;
-    height: 18px;
-    margin-right: 0.5rem;
-}
-
-/* Register text */
-.register-text {
+/* Resend code link */
+.resend-text {
     text-align: center;
-    color: #666;
-    font-size: 0.9rem;
-    margin: 0;
+    font-size: 1rem;
+    margin-top: 1rem;
 }
 
-.register-text a {
+.resend-text a {
     color: #ff6b6b;
     text-decoration: none;
 }
 
-.register-text a:hover {
+.resend-text a:hover {
+    text-decoration: underline;
+}
+
+/* Terms text */
+.terms-text {
+    text-align: center;
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: 2rem;
+}
+
+.terms-text a {
+    color: #ff6b6b;
+    text-decoration: none;
+}
+
+.terms-text a:hover {
     text-decoration: underline;
 }
 
 /* Responsive adjustments */
 @media (max-width: 480px) {
-    .login-card {
+    .verify-card {
         width: 100%;
         margin: 0;
         border-radius: 0;
         padding: 1.5rem;
     }
 }
-
-.error-message {
-    color: red;
-    font-size: 12px;
-    margin-top: 5px;
-  }
-  
-  .invalid {
-    border-color: red;
-  }
