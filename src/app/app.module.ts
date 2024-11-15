@@ -5,9 +5,9 @@ import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { LoginComponent } from './pages/auth/login/login.component';
-import { ValidacionComponent } from './pages/auth/validacion/validacion.component';
-import { RegistermainComponent } from './pages/auth/registermain/registermain.component';
+import { LoginComponent } from './pages/tiktok/auth/login/login.component';
+import { ValidacionComponent } from './pages/tiktok/auth/validacion/validacion.component';
+import { RegistermainComponent } from './pages/tiktok/auth/registermain/registermain.component';
 
 @NgModule({
   declarations: [
