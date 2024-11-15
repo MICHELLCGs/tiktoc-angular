@@ -1,0 +1,94 @@
+/* src/app/pages/auth/registermain/registermain.component.css */
+.form-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.form-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.logo {
+  width: 100px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-top: 0;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.input-group input, .input-group select {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.dob-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.dob-container select {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.dob-container select:last-child {
+  margin-right: 0;
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 12px;
+  background-color: #0073e6;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn-google {
+  width: 100%;
+  padding: 12px;
+  background-color: #db4437;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.login-link {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.login-link a {
+  color: #0073e6;
+  text-decoration: none;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+

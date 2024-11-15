@@ -1,0 +1,212 @@
+/* Contenedor general */
+.app-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #e5e5e5; /* Fondo gris oscuro */
+  }
+  
+  /* Encabezado */
+  .app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    gap: 10px;
+  }
+  
+  .search-bar input {
+    width: 400px;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 16px;
+  }
+  
+  .search-bar .icon {
+    font-size: 18px;
+  }
+  
+  .header-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 5px;
+  }
+  
+  .header-right .login-button {
+    padding: 8px 12px;
+    background-color: #ff5722;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .header-right .coins {
+    font-size: 16px;
+    color: #666;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  /* Contenido principal */
+  .feed-container {
+    display: flex;
+    flex: 1;
+  }
+  
+  /* Barra lateral */
+  .sidebar {
+    width: 20%;
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar ul li {
+    margin-bottom: 15px;
+  }
+  
+  .sidebar ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #000;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .sidebar ul li a span {
+    font-size: 20px;
+  }
+  
+  .sidebar ul li a.active {
+    font-weight: bold;
+    color: #ff5722;
+  }
+  
+  .sidebar p {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .sidebar .login-button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #ff5722;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Contenido principal */
+  .main-feed {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Video */
+  .video-section {
+    position: relative;
+    width: 350px;
+    height: 620px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .video-description {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    max-width: 90%;
+  }
+  
+  .video-description p {
+    margin: 0 0 5px 0;
+  }
+  
+  .video-description a {
+    color: #00f;
+    text-decoration: none;
+  }
+  
+  .video-description button {
+    margin-top: 5px;
+    padding: 5px 10px;
+    background-color: #ff5722;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Barra de interacción */
+  .interaction-bar {
+    position: absolute;
+    top: 50%;
+    right: -50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    transform: translateY(-50%);
+  }
+  
+  .interaction-bar button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .interaction-bar button .count {
+    font-size: 16px;
+    color: #fff;
+  }
+  
+  .interaction-bar button span.liked {
+    color: red;
+  }
+  
