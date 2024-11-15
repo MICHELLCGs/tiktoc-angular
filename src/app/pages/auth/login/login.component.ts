@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
-import { CommonModule } from '@angular/common'; 
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-login',
@@ -46,9 +46,10 @@ export class LoginComponent {
   constructor(private router: Router) {}
 
   onSubmit(): void {
+    // Solo redirigir si el formulario es válido
     if (this.isFormValid()) {
       console.log('Inicio de sesión exitoso');
-      this.router.navigate(['/validacion']);
+      this.router.navigate(['/validacion']);  // Redirige a la página de validación
     } else {
       alert('Por favor, completa todos los campos correctamente');
     }
@@ -58,3 +59,4 @@ export class LoginComponent {
     console.log('Inicio de sesión con Google');
   }
 }
+
