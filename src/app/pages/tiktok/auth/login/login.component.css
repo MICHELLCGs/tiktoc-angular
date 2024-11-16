@@ -36,15 +36,6 @@
     margin-bottom: 20px;
   }
 
-/* Logo */
-.logo {
-    display: block;
-    width: 100px;
-    height: auto;
-    margin: 0 auto;
-    margin-bottom: 2rem;
-}
-
 /* Register text */
 .register-text {
     text-align: center;

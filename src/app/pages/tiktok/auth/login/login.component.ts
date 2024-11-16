@@ -6,11 +6,12 @@ import { BackgroundComponent } from '../../../../components/AuthenticationCompon
 import { ButtonComponent } from '../../../../components/AuthenticationComponents/button/button.component';
 import { InputComponent } from '../../../../components/AuthenticationComponents/input/input.component';
 import { GoogleButtonComponent } from '../../../../components/AuthenticationComponents/google-button/google-button.component';
+import { LogoComponent } from '../../../../components/AuthenticationComponents/logo/logo.component';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [FormsModule, CommonModule, BackgroundComponent, ButtonComponent, InputComponent, GoogleButtonComponent], // Manually add imports
+  imports: [LogoComponent, FormsModule, CommonModule, BackgroundComponent, ButtonComponent, InputComponent, GoogleButtonComponent], // Manually add imports
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })

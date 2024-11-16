@@ -1,12 +1,14 @@
 <app-background></app-background>
 <div class="login-card">
-  <img src="assets/logo.svg" alt="Logo" class="logo" />
+  <app-logo src="assets/logo.svg" alt="Logo" [customClass]="'custom-logo-class'"></app-logo>
+
   <div class="form-container">
     <form (ngSubmit)="onSubmit()">
+      <!-- Correo -->
       <app-input label="Correo" type="email" name="email" placeholder="Dirección de correo electrónico"
         [(ngModel)]="email" [isInvalid]="!isEmailValid()" [touched]="emailTouched"
         errorMessage="Ingrese un correo válido." (blur)="emailTouched = true"></app-input>
-
+      <!-- Contraseña -->
       <app-input label="Contraseña" type="password" name="password" placeholder="Introduce la contraseña"
         [(ngModel)]="password" [isInvalid]="!isPasswordValid()" [touched]="passwordTouched"
         errorMessage="La contraseña debe tener entre 8 y 14 caracteres y contener letras (Mayúsculas y minúsculas), números y símbolos (_ o -)."
