@@ -13,7 +13,7 @@
         [(ngModel)]="password" [isInvalid]="!isPasswordValid()" [touched]="passwordTouched"
         errorMessage="La contraseña debe tener entre 8 y 14 caracteres y contener letras (Mayúsculas y minúsculas), números y símbolos (_ o -)."
         (blur)="passwordTouched = true"></app-input>
-
+      <!-- Telefono -->
       <app-input label="Teléfono" type="tel" name="phone" placeholder="Número de teléfono" [(ngModel)]="phone"
         [isInvalid]="!isPhoneValid()" [touched]="phoneTouched" [showCountrySelector]="true"
         [selectedCountryCode]="'+51'" errorMessage="El número de teléfono debe tener 9 dígitos."

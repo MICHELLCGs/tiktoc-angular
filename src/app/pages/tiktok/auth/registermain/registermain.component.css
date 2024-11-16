@@ -1,98 +1,126 @@
- /* Background */
- app-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1; /* Coloca el fondo detrás */
+/* Contenedor Principal */
+.container {
+  position: relative; /* Contenedor relativo para posicionar fondo y tarjeta */
+  width: 100%; /* Abarca todo el ancho */
+  min-height: 100vh; /* Asegura que cubra toda la pantalla inicialmente */
+  display: flex;
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: flex-start; /* Alinea al inicio vertical */
 }
 
+
+
+/* Contenedor del Formulario */
+.register-card {
+  width: 30%;
+  min-height: 90%; /* Asegura una altura mínima */
+  margin: 30px auto;
+  margin-top: 0px;
+  padding: 20px 70px;
+  background-color: #FFFFFF;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 20px 20px 20px rgba(211, 2, 67, 1);
+  z-index: 1; /* Coloca por encima del fondo */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+
+/* Contenedor de Formulario */
 .form-container {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: white;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  flex: 1; /* Esto permite que el formulario ocupe el espacio disponible */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Opcional: centra el formulario verticalmente */
+
+}
+.login-text{
+  margin: 0px;
 }
 
-.form-header {
-  text-align: center;
-  margin-bottom: 20px;
+/* Contenedor de Google y Registro */
+.google-and-login-container {
+  margin-top: 10px; /* Empuja el contenedor hacia abajo */
+  text-align: center; /* Opcional: alinea el texto y botones al centro */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-h2 {
-  font-size: 24px;
-  margin-top: 0;
-}
-
-.input-group {
-  margin-bottom: 15px;
-}
-
-.input-group label {
-  display: block;
-  font-size: 14px;
-  margin-bottom: 5px;
-}
-
-.input-group input, .input-group select {
-  width: 100%;
-  padding: 10px;
-  font-size: 14px;
-  border: 1px solid #ccc;
+/* Dropdown Sexo */
+.input-group{
+  margin: 0px;
+  padding: 0px;
+  margin-bottom: 1rem;
+  position: relative;
+  display: flex; /* Cambiar de "column" a "flex" */
+  flex-direction: column; /* Asegura que los hijos estén en columna */
+  align-items: left;
   border-radius: 4px;
+  overflow: hidden;
+  gap: 0.5rem; /* Espaciado entre los elementos */
+  margin-bottom: 1rem;
 }
 
+
+.input-group input, .input-group select{
+  width: 100%;
+    padding: 10px 30px;
+    border: 1px solid #7F7F7F;
+    border-radius: 4px;
+    font-size: 16;
+    font-weight: 500;
+    transition: border-color 0.2s;
+    box-sizing: border-box;
+    outline: none;
+    color: #333;
+    
+}
+
+
+/*Titulo de Input*/
+.input-group label {
+  font-size: 24;
+  font-weight: 600;
+  color: #333;
+}
+
+
+/* Input Fecha */
 .dob-container {
   display: flex;
+  flex-direction: row;
+  gap: 10px;
   justify-content: space-between;
 }
 
-.dob-container select {
-  flex: 1;
-  margin-right: 10px;
+/* Error Fecha */
+.error-message {
+  color: red;
+    font-size: 12px;
+    margin-top: 0px;
 }
 
-.dob-container select:last-child {
-  margin-right: 0;
-}
 
-.btn-submit {
-  width: 100%;
-  padding: 12px;
-  background-color: #0073e6;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  font-size: 16px;
-  cursor: pointer;
-}
+/* Login text */
 
-.btn-google {
-  width: 100%;
-  padding: 12px;
-  background-color: #db4437;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  font-size: 16px;
-  cursor: pointer;
-  margin-top: 10px;
-}
-
-.login-link {
+.login-text {
   text-align: center;
-  margin-top: 20px;
+    color: #000;
+    font-size: 16;
+    font-weight: 500;
+    margin: 0;
 }
 
-.login-link a {
-  color: #0073e6;
-  text-decoration: none;
+.login-text a {
+  color: #ff6b6b;
+    text-decoration: none;
 }
 
-.login-link a:hover {
+.login-text a:hover {
   text-decoration: underline;
 }
+
+
 

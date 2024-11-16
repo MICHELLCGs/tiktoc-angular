@@ -1,70 +1,77 @@
+<div class="container">
 <app-background></app-background>
+
 <div class="register-card">
-  
+  <app-logo src="assets/logo.svg" alt="Logo" [customClass]="'custom-logo-class'"></app-logo>
   <div class="form-container">
-  
-  <div class="form-header">
-    <app-logo src="assets/logo.svg" alt="Logo" [customClass]="'custom-logo-class'"></app-logo>
-
-    <h2>Crear Cuenta</h2>
-  </div>
-
-  <form (submit)="onSubmit($event)">
-    <!-- Correo -->
-    <app-input label="Correo" type="email" name="email" placeholder="Dirección de correo electrónico"
-        [(ngModel)]="email" [isInvalid]="!isEmailValid()" [touched]="emailTouched"
-        errorMessage="Ingrese un correo válido." (blur)="emailTouched = true"></app-input>
+    <form (submit)="onSubmit($event)">
+      <!-- Correo -->
+      <app-input label="Correo" type="email" name="email" placeholder="Dirección de correo electrónico"
+          [(ngModel)]="email" [isInvalid]="!isEmailValid()" [touched]="emailTouched"
+          errorMessage="Ingrese un correo válido." (blur)="emailTouched = true"></app-input>
 
 
-    <!-- Contraseña -->
-    <app-input label="Contraseña" type="password" name="password" placeholder="Introduce la contraseña"
-        [(ngModel)]="password" [isInvalid]="!isPasswordValid()" [touched]="passwordTouched"
-        errorMessage="La contraseña debe tener entre 8 y 14 caracteres y contener letras (Mayúsculas y minúsculas), números y símbolos (_ o -)."
-        (blur)="passwordTouched = true"></app-input>
+      <!-- Contraseña -->
+      <app-input label="Contraseña" type="password" name="password" placeholder="Introduce la contraseña"
+          [(ngModel)]="password" [isInvalid]="!isPasswordValid()" [touched]="passwordTouched"
+          errorMessage="La contraseña debe tener entre 8 y 14 caracteres y contener letras (Mayúsculas y minúsculas), números y símbolos (_ o -)."
+          (blur)="passwordTouched = true"></app-input>
 
-    <!-- Nombre -->
-    <app-input label="Nombre" type="text" name="name" placeholder="Introduce tu nombre"[(ngModel)]="name" 
-      [isInvalid]="!isNameValid()" [touched]="nameTouched"errorMessage="El nombre no puede estar vacío y debe contener solo letras y espacios."(blur)="nameTouched = true">
-    </app-input>
+      <!-- Nombre -->
+      <app-input label="Nombre" type="text" name="name" placeholder="Añade tu nombre"[(ngModel)]="name" 
+        [isInvalid]="!isNameValid()" [touched]="nameTouched"errorMessage="El nombre no puede estar vacío y debe contener solo letras y espacios."(blur)="nameTouched = true">
+      </app-input>
 
 
 
-    <!-- Sexo -->
-    <div class="input-group">
-      <label for="gender">Sexo</label>
-      <select id="gender" name="gender" required>
-        <option value="" disabled>Seleccionar</option>
-        <option value="male">Masculino</option>
-        <option value="female">Femenino</option>
-      </select>
-    </div>
+      <!-- Sexo -->
+      <div class="input-group">
+        <label for="gender">Sexo</label>
+        <select id="gender" name="gender" required>
+          <option value="" disabled selected>Seleccionar</option>
+          <option value="male">Masculino</option>
+          <option value="female">Femenino</option>
+        </select>
+      </div>
 
-    <!-- Teléfono -->
-    <app-input label="Teléfono" type="tel" name="phone" placeholder="Número de teléfono" [(ngModel)]="phone"
-        [isInvalid]="!isPhoneValid()" [touched]="phoneTouched" [showCountrySelector]="true"
-        [selectedCountryCode]="'+51'" errorMessage="El número de teléfono debe tener 9 dígitos."
-        (blur)="phoneTouched = true"></app-input>
+      <!-- Teléfono -->
+      <app-input label="Teléfono" type="tel" name="phone" placeholder="Número de teléfono" [(ngModel)]="phone"
+          [isInvalid]="!isPhoneValid()" [touched]="phoneTouched" [showCountrySelector]="true"
+          [selectedCountryCode]="'+51'" errorMessage="El número de teléfono debe tener 9 dígitos."
+          (blur)="phoneTouched = true"></app-input>
 
-    <!-- Fecha de nacimiento -->
+      <!-- Fecha de nacimiento -->
     <div class="input-group">
       <label for="dob">Fecha de nacimiento</label>
       <div class="dob-container">
-        <input type="text" id="dob-day" name="dobDay" required placeholder="Día (DD)" maxlength="2" pattern="([0-2][0-9]|3[01])" />
-        <input type="text" id="dob-month" name="dobMonth" required placeholder="Mes (MM)" maxlength="2" pattern="(0[1-9]|1[0-2])" />
-        <input type="text" id="dob-year" name="dobYear" required placeholder="Año (AAAA)" maxlength="4" pattern="\d{4}" />
+        <input type="text" id="dob-day" name="dobDay" required placeholder="Día (DD)" maxlength="2" pattern="([0-2][0-9]|3[01])" 
+          [(ngModel)]="dobDay" (ngModelChange)="updateDateOfBirth(dobDay, dobMonth, dobYear)" />
+        <input type="text" id="dob-month" name="dobMonth" required placeholder="Mes (MM)" maxlength="2" pattern="(0[1-9]|1[0-2])" 
+          [(ngModel)]="dobMonth" (ngModelChange)="updateDateOfBirth(dobDay, dobMonth, dobYear)" />
+        <input type="text" id="dob-year" name="dobYear" required placeholder="Año (AAAA)" maxlength="4" pattern="\d{4}" 
+          [(ngModel)]="dobYear" (ngModelChange)="updateDateOfBirth(dobDay, dobMonth, dobYear)" />
+      </div>
+
+
+      <!-- Mensaje de error para la fecha de nacimiento -->
+      <div *ngIf="!isDobValid" class="error-message">
+        La fecha ingresada no es válida. Por favor, verifica el día, mes o año.
       </div>
     </div>
+       <!-- Botón de envío -->
+       <app-button type="submit" [btnClass]="'btn-primary ' + (isFormValid() ? 'btn-valid' : '')" [label]="'Siguiente'"
+       [disabled]="!isFormValid()"></app-button>
+    </form>
 
-    <!-- Botón de envío -->
-    <button type="submit" class="btn-submit">Siguiente</button>
-  </form>
-
-  <button class="btn-google">Continue with Google</button>
-
-  <p class="login-link">¿Ya te tienes una cuenta? <a href="/login">Inicia sesión</a></p>
+    <div class="google-and-login-container">
+      <app-google-button (clickEvent)="onGoogleLogin()"></app-google-button>
+      <p class="login-text">
+        ¿Ya te  tienes una cuenta? <a href="/login">Inicia sesión</a>
+      </p>
+    </div>
 </div>
 </div>
-
+</div>
 
 
 

@@ -11,7 +11,7 @@ import { LogoComponent } from '../../../../components/AuthenticationComponents/l
 @Component({
   selector: 'app-registermain',
   standalone: true,
-  imports: [LogoComponent, FormsModule, CommonModule, BackgroundComponent, ButtonComponent, InputComponent, GoogleButtonComponent], // Manually add imports
+  imports: [ LogoComponent, FormsModule, CommonModule, BackgroundComponent, ButtonComponent, InputComponent, GoogleButtonComponent], // Manually add imports
   templateUrl: './registermain.component.html',
   styleUrls: ['./registermain.component.css']
 })
@@ -21,15 +21,20 @@ export class RegistermainComponent {
   phone: string = '';
   name: string = '';
   countryCode: string = '+51';
-
-
+  dobDay: number | null = null;
+  dobMonth: number | null = null;
+  dobYear: number | null = null;
   // Flags to track if the fields have been touched
   emailTouched: boolean = false;
   passwordTouched: boolean = false;
   phoneTouched: boolean = false;
   nameTouched: boolean = false;
+  isDobValid: boolean = true;
 
   constructor(private router: Router) {}
+
+
+  
   // Validación del correo
   isEmailValid(): boolean {
     const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
@@ -55,34 +60,53 @@ export class RegistermainComponent {
   }
   
 
-  // Método para validar la fecha
-  isValidDate(day: number, month: number, year: number): boolean {
+  // Método para validar la fecha, con soporte para valores `null`
+  isValidDate(day: number | null, month: number | null, year: number | null): boolean {
+    if (day === null || month === null || year === null) return false;
+
+    if (month < 1 || month > 12 || day < 1) return false;
+
     const daysInMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+    if (day > daysInMonth[month - 1]) return false;
 
-    if (day < 1 || day > daysInMonth[month - 1]) {
-      return false;
+    // Verificar año bisiesto para el mes de febrero
+    if (month === 2 && year % 4 === 0) {
+      if (year % 100 !== 0 || year % 400 === 0) {
+        if (day > 29) return false;
+      } else if (day > 28) return false;
     }
 
-    if (month === 2 && year % 4 === 0 && (year % 100 !== 0 || year % 400 === 0)) {
-      if (day > 29) {
-        return false;
-      }
-    }
-
-    return true;
+    const currentYear = new Date().getFullYear();
+    return year >= 1900 && year <= currentYear;
   }
+
   
   // Verificar si el formulario es válido
   isFormValid(): boolean {
-    return this.isEmailValid() && this.isPasswordValid() && this.isPhoneValid() && this.isNameValid();
+    return this.isEmailValid() && 
+           this.isPasswordValid() && 
+           this.isPhoneValid() && 
+           this.isNameValid() && 
+           this.isValidDate(this.dobDay, this.dobMonth, this.dobYear); // Validación de la fecha antes de habilitar el botón
   }
 
-  // Método llamado al enviar el formulario
+    // Actualizar los valores de la fecha de nacimiento
+  updateDateOfBirth(day: number | null, month: number | null, year: number | null) {
+    this.dobDay = day;
+    this.dobMonth = month;
+    this.dobYear = year;
+    this.isDobValid = this.isValidDate(this.dobDay, this.dobMonth, this.dobYear);
+  }
+
+  onGoogleLogin(): void {
+    console.log('Inicio de sesión con Google');
+  }
+
   onSubmit(event: any) {
     event.preventDefault();  // Evitar el comportamiento por defecto del formulario
-
+  
     const formData = new FormData(event.target);
-    
+  
     // Extraer los valores del formulario
     const email = formData.get('email');
     const password = formData.get('password');
@@ -92,18 +116,20 @@ export class RegistermainComponent {
     const dobDay = parseInt(formData.get('dobDay') as string, 10);
     const dobMonth = parseInt(formData.get('dobMonth') as string, 10);
     const dobYear = parseInt(formData.get('dobYear') as string, 10);
-
+  
     // Validar la fecha
     if (!this.isValidDate(dobDay, dobMonth, dobYear)) {
       alert('La fecha ingresada no es válida. Verifica el día, mes o año.');
       return;
     }
-
-    // Si todo está bien, redirigir a la página de validación
-    this.router.navigate(['/validacion']);
-
-
-    
+  
+    // Validar todos los campos
+    if (this.isEmailValid() && this.isPasswordValid() && this.isPhoneValid() && this.isNameValid()) {
+      // Si todo está bien, redirigir a la página de validación
+      this.router.navigate(['/validacion']);
+    } else {
+      alert('Por favor, revisa los campos del formulario.');
+    }
   }
 
 
