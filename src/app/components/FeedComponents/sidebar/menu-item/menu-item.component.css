@@ -1,0 +1,12 @@
+.menu-item {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px 0;
+  }
+  
+  .menu-icon {
+    width: 24px;
+    margin-right: 10px;
+  }
+  

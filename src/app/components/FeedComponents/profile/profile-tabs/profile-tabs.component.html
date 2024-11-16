@@ -1,0 +1,11 @@
+<div class="tabs">
+    <button
+      *ngFor="let tab of tabs"
+      [class.active]="activeTab === tab.id"
+      (click)="selectTab(tab.id)">
+      <img [src]="tab.icon" alt="{{ tab.label }} icon" class="tab-icon" />
+      {{ tab.label }}
+    </button>
+  </div>
+  
+  
