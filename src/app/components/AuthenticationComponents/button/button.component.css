@@ -1,0 +1,20 @@
+/* Estilo predeterminado del botón */
+.btn-primary {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #EFF2EF;
+    border: none;
+    border-radius: 4px;
+    color: #B1B3B0;
+    font-size: 16;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  /* Estilo cuando es válido */
+  .btn-valid {
+    background-color: #FF4500;
+    color: #FFFFFF;
+  }
+  

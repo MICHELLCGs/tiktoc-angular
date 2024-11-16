@@ -1,0 +1,37 @@
+<div class="input-component">
+    <label *ngIf="label" [for]="name">{{ label }}</label>
+    <div class="input-group" *ngIf="showCountrySelector; else simpleInput">
+      <div class="input-wrapper">
+        <app-country-code-selector
+          class="country-selector"
+          [selectedCountryCode]="selectedCountryCode"
+          (countryCodeChange)="onCountryCodeChange($event)"
+        ></app-country-code-selector>
+        <input
+          [type]="type"
+          [id]="name"
+          [name]="name"
+          [value]="value"
+          [placeholder]="placeholder"
+          [ngClass]="{ invalid: isInvalid && touched }"
+          (input)="onInput($event)"
+          (blur)="touched = true"
+        />
+      </div>
+    </div>
+    <ng-template #simpleInput>
+      <input
+        [type]="type"
+        [id]="name"
+        [name]="name"
+        [value]="value"
+        [placeholder]="placeholder"
+        [ngClass]="{ invalid: isInvalid && touched }"
+        (input)="onInput($event)"
+        (blur)="touched = true"
+      />
+    </ng-template>
+    <div *ngIf="isInvalid && touched" class="error-message">{{ errorMessage }}</div>
+  </div>
+  
+  

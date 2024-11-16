@@ -3,11 +3,14 @@ import { Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { BackgroundComponent } from '../../../../components/AuthenticationComponents/background/background.component';
+import { ButtonComponent } from '../../../../components/AuthenticationComponents/button/button.component';
+import { InputComponent } from '../../../../components/AuthenticationComponents/input/input.component';
+import { GoogleButtonComponent } from '../../../../components/AuthenticationComponents/google-button/google-button.component';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [FormsModule, CommonModule, BackgroundComponent], // Manually add imports
+  imports: [FormsModule, CommonModule, BackgroundComponent, ButtonComponent, InputComponent, GoogleButtonComponent], // Manually add imports
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
@@ -15,6 +18,7 @@ export class LoginComponent {
   email: string = '';
   password: string = '';
   phone: string = '';
+  countryCode: string = '+51'; // Valor por defecto
 
   // Flags to track if the fields have been touched
   emailTouched: boolean = false;

@@ -1,0 +1,5 @@
+<select [(ngModel)]="selectedCountryCode" (ngModelChange)="onCountryCodeChange($event)">
+  <option *ngFor="let country of countryCodes" [value]="country.code" class="codigo">
+    {{ country.country }} {{ country.code }}
+  </option>
+</select>

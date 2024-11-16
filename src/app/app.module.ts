@@ -8,7 +8,6 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './pages/tiktok/auth/login/login.component';
 import { ValidacionComponent } from './pages/tiktok/auth/validacion/validacion.component';
 import { RegistermainComponent } from './pages/tiktok/auth/registermain/registermain.component';
-import { FormInputComponent } from './components/AuthenticationComponents/form-input/form-input.component'; 
 
 
 @NgModule({
@@ -17,7 +16,6 @@ import { FormInputComponent } from './components/AuthenticationComponents/form-i
     LoginComponent,
     ValidacionComponent,
     RegistermainComponent,
-    FormInputComponent,
     
   ],
   imports: [
@@ -28,6 +26,5 @@ import { FormInputComponent } from './components/AuthenticationComponents/form-i
   ],
   providers: [],
   bootstrap: [AppComponent],
-  exports: [FormInputComponent]
 })
 export class AppModule { }
