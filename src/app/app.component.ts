@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { FormsModule } from '@angular/forms'; // Importar FormsModule
-import { CommonModule } from '@angular/common'; // Importar CommonModule para directivas básicas como *ngFor y *ngIf
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common'; 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, FormsModule, CommonModule], // Agregar FormsModule y CommonModule
+  imports: [RouterOutlet, FormsModule, CommonModule], 
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'] // Cambié 'styleUrl' a 'styleUrls' para evitar errores
+  styleUrls: ['./app.component.css'] 
 })
 export class AppComponent {
   title = 'front-angular';
