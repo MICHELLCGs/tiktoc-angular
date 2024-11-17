@@ -1,0 +1,28 @@
+.actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+  
+  .action {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+  }
+  
+  .action img {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 4px;
+  }
+  
+  .action span {
+    font-size: 14px;
+    color: white;
+  }
+  

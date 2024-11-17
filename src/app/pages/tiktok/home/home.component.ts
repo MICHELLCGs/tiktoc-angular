@@ -3,13 +3,14 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 import { SidebarComponent } from '../../../components/FeedComponents/sidebar/sidebar.component'; 
+import { VideoComponent } from '../../../components/video/video.component';
 
 
 
 @Component({
   selector: 'app-feed-item',
   standalone: true,
-  imports: [CommonModule, FormsModule, SidebarComponent],
+  imports: [CommonModule, FormsModule, SidebarComponent, VideoComponent],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
 })

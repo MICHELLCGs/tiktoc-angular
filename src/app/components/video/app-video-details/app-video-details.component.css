@@ -1,0 +1,26 @@
+.details {
+    width: 100%;
+    padding: 16px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  
+  .description {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+  
+  .platform {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .platform img {
+    width: 16px;
+    height: 16px;
+  }
+  
