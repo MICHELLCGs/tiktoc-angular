@@ -1,7 +1,7 @@
 import {Component,Input,Output,EventEmitter,forwardRef,} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {ControlValueAccessor,NG_VALUE_ACCESSOR,} from '@angular/forms';
-import { CountryCodeSelectorComponent } from '../country-code-selector/country-code-selector.component';
+import { CountryCodeSelectorComponent } from './country-code-selector/country-code-selector.component';
 
 
 @Component({

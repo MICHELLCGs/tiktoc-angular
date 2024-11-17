@@ -1,1 +1,49 @@
-<p>profile works!</p>
+
+<app-container>
+<div class="feed-container">
+
+  <!-- Contenido principal del perfil -->
+  <div class="profile-content">
+    <!-- Componente Header -->
+    <app-profile-header
+      [username]="'@arianzesan'"
+      [level]="'Principiante'"
+      [coins]="10"
+      [surveysCompleted]="5"
+      [avatarUrl]="'assets/user-avatar.jpg'">
+  </app-profile-header>
+
+  <!-- Componente de pestañas -->
+  <app-profile-tabs (tabChange)="onTabChange($event)"></app-profile-tabs>
+
+  <!-- Sección de "Me gusta" -->
+  <div *ngIf="activeTab === 'likes'">
+    <!-- Aquí puedes poner el contenido de "Me gusta" -->
+    <div class="video-gallery">
+      <app-profile-video-item
+        *ngFor="let video of videos"
+        [videoUrl]="video.videoUrl">
+      </app-profile-video-item>
+    </div>
+  </div>
+
+  <!-- Sección de "Encuestas hechas" -->
+  <div *ngIf="activeTab === 'surveys'">
+    <div class="encuestas-list">
+      <app-encuesta-item 
+        *ngFor="let encuesta of encuestas" 
+        [encuesta]="encuesta" 
+        [encuestaActual]="0">
+      </app-encuesta-item>
+    </div>
+  </div>
+
+    
+  </div>
+</div>
+
+</app-container>
+
+
+
+

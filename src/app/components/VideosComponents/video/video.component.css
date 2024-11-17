@@ -1,0 +1,21 @@
+.video-container {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+  
+  video {
+    width: 100%;
+    height: auto;
+    max-height: 90vh;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 50%; /* Mantenerlo centrado */
+    transform: translateY(-50%); /* Ajustar para centrar exactamente */
+  }
+  

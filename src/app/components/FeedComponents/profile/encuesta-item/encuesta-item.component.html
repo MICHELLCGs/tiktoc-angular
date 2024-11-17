@@ -1,0 +1,14 @@
+<div class="encuesta-container">
+  <div class="encuesta">
+    <p class="titulo-superior">{{ encuesta.titulo }}</p> <!-- Cambié title a titulo -->
+    <div class="encuesta-content">
+      <div class="image-container">
+        <img [src]="encuesta.imagenUrl" [alt]="encuesta.titulo"> <!-- Cambié title a titulo -->
+      </div>
+      <div class="text-content">
+        <p>{{ encuesta.descripcion }}</p> <!-- Cambié description a descripcion -->
+        <button class="start-button">Empezar</button>
+      </div>
+    </div>
+  </div>
+</div>

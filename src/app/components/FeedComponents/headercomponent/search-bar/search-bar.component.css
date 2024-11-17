@@ -1,0 +1,54 @@
+/* search-bar.component.css */
+.search-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 50px;
+    background-color: #F0F0F0;
+    min-width: auto;
+    width: 100%;
+    max-height: 40px;
+    transition: filter 0.3s ease;
+    border-radius: 30px;
+  }
+  
+  .search-bar input {
+    border: none;
+    outline: none;
+    width: 100%;
+    background-color: transparent;
+    padding: 0px;
+    margin-right: 10px;
+    color: #8E8E93;
+    font-size: 16px;
+  }
+  .search-bar input::placeholder{
+    color: #8E8E93;
+  }
+  
+  /* Estilo para el botón */
+.button-icon {
+    border: none;
+    width: 32px;
+    height: 32px;
+    background: transparent; /* Para que el fondo no interfiera */
+    padding: 0;
+    cursor: pointer; /* Muestra un puntero al pasar sobre el ícono */
+    display: inline-flex; /* Para asegurar que la imagen esté centrada en el botón */
+    justify-content: center;
+    align-items: center;
+    margin-left: 30px;
+    
+    transition: transform 0.3s ease, filter 0.3s ease; /* Transiciones para un efecto suave */
+  }
+  
+  /* Cambiar el color cuando el mouse está sobre el botón */
+  .button-icon:hover img {
+    filter: invert(50%) sepia(1) saturate(500%) hue-rotate(180deg);
+  }
+  
+  /* Cambiar el color cuando el botón es presionado */
+  .button-icon:active img {
+    filter: invert(100%) sepia(1) saturate(500%) hue-rotate(180deg);
+  }

@@ -1,0 +1,15 @@
+/* Contenedor general */
+.app-container {
+    display: flex;
+    flex-direction: column; /* Para que el encabezado esté en la parte superior */
+    height: 100vh; /* Para que ocupe toda la altura de la pantalla */
+  }
+    .feed-container {
+      display: flex;
+      flex: 1; /* El contenido principal ocupará el espacio restante */
+    }
+      
+      .main-content {
+        flex: 1;
+        padding: 20px; /* Ajusta el espacio según sea necesario */
+      }
