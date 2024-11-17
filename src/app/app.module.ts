@@ -18,6 +18,7 @@ import { LoginPromptComponent } from './components/FeedComponents/sidebar/login-
 import { LoginButtonComponent } from './components/FeedComponents/sidebar/login-button/login-button.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,

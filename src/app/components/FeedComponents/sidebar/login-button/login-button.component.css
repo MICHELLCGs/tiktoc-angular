@@ -1,9 +1,23 @@
 .login-button {
-    background-color: #ff7f7f;
-    color: white;
-    border: none;
+    background: linear-gradient(to right, #ff7f7f, #ffae7f); /* Gradiente de fondo */
+    color: #ff3366; /* Color del texto */
+    border: 2px solid transparent; /* Borde transparente */
     padding: 10px 20px;
-    border-radius: 5px;
+    border-radius: 8px; /* Bordes redondeados */
+    font-size: 16px;
+    font-weight: bold;
     cursor: pointer;
+    transition: all 0.3s ease; /* Transición suave */
+    text-align: center;
   }
+  
+  .login-button:hover {
+    background: linear-gradient(to right, #ffffff, #ffccaa); /* Nuevo gradiente en hover */
+    color: #ff7f7f; /* Cambia el color del texto */
+    border-color: #ff7f7f; /* Cambia el borde a un color sólido */
+    transform: scale(1.05); /* Agranda ligeramente el botón */
+    box-shadow: 0 4px 10px rgba(255, 127, 127, 0.4); /* Añade sombra */
+  }
+  
+  
   

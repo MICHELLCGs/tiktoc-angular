@@ -1,12 +1,30 @@
 <div class="profile-header">
-    <img src="assets/user-profile.jpg" alt="Foto de perfil" class="profile-picture" />
+    <!-- Imagen del avatar -->
+    <img [src]="avatarUrl" alt="Foto de perfil" class="profile-picture" />
+  
+    <!-- Información del usuario -->
     <div class="profile-info">
       <h2>{{ username }}</h2>
-      <p>{{ level }}</p>
+      <div class="user-level">
+        <p>{{ level }}</p>
+      </div>
+  
+      <!-- Estadísticas del perfil -->
       <div class="profile-stats">
-        <span>Monedas: {{ coins }}</span>
-        <span>Encuestas hechas: {{ surveysCompleted }}</span>
+        <div class="stat-item">
+          <img src="assets/level-icon.svg" alt="Nivel" class="stat-icon" />
+          <span>{{ level }}</span>
+        </div>
+        <div class="stat-item">
+          <img src="assets/coin-icon.svg" alt="Monedas" class="stat-icon" />
+          <span>{{ coins }}</span>
+        </div>
+        <div class="stat-item">
+          <img src="assets/survey-icon.svg" alt="Encuestas hechas" class="stat-icon" />
+          <span>{{ surveysCompleted }}</span>
+        </div>
       </div>
     </div>
   </div>
+  
   

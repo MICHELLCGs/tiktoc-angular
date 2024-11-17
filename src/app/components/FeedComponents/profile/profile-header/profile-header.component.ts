@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-profile-header',
@@ -7,8 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./profile-header.component.css']
 })
 export class ProfileHeaderComponent {
-  username: string = '@arianzesan';
-  level: string = 'Principiante';
-  coins: number = 0;
-  surveysCompleted: number = 0;
+  @Input() username: string = ''; // Recibe el nombre del usuario
+  @Input() level: string = ''; // Recibe el nivel del usuario
+  @Input() coins: number = 0; // Recibe el número de monedas
+  @Input() surveysCompleted: number = 0; // Recibe el número de encuestas completadas
+  @Input() avatarUrl: string = 'assets/default-avatar.jpg'; // URL para la foto de perfil
 }
+
+
