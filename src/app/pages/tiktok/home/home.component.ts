@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { SidebarComponent } from '../../../components/FeedComponents/sidebar/sidebar.component'; 
+import { AppContainerComponent } from '../../../components/FeedComponents/app-container/app-container.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, FormsModule, SidebarComponent],
+  imports: [AppContainerComponent,CommonModule, FormsModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })

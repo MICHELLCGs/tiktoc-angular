@@ -1,0 +1,42 @@
+.comment-input {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    padding: 10px;
+    background: #f9f9f9;
+    border-radius: 25px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .input-field {
+    flex: 1;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 20px;
+    font-size: 14px;
+    background: #ffffff;
+    margin-right: 10px;
+    outline: none;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .send-button {
+    background-color: #ff5a5f;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .send-button img {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .send-button:hover {
+    background-color: #e0474e;
+  }
+  

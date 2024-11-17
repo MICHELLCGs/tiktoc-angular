@@ -1,56 +1,56 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import { SidebarComponent } from '../../../components/FeedComponents/sidebar/sidebar.component'; 
+import { MenuComponent } from '../../../components/FeedComponents/sidebar/menu/menu.component'; // Importa el componente menú
 import { PromptComponent } from '../../../components/FeedComponents/sidebar/prompt/prompt.component';
-import { ProfileHeaderComponent } from '../../../components/FeedComponents/profile/profile-header/profile-header.component';
+import { ButtonComponent } from '../../../components/FeedComponents/sidebar/button/button.component';
 import { ProfileTabsComponent } from '../../../components/FeedComponents/profile/profile-tabs/profile-tabs.component';
 import { ProfileGalleryComponent } from '../../../components/FeedComponents/profile/profile-gallery/profile-gallery.component';
-
+import { SidebarComponent } from '../../../components/FeedComponents/sidebar/sidebar.component';
+import { EncuestaItemComponent } from '../../../components/FeedComponents/profile/encuesta-item/encuesta-item.component';
+import { AppContainerComponent } from '../../../components/FeedComponents/app-container/app-container.component';
+import { ProfileVideoItemComponent } from '../../../components/VideosComponents/profile-video-item/profile-video-item.component';
+import { ProfileHeaderComponent } from '../../../components/FeedComponents/profile/profile-header/profile-header.component';
 @Component({
   selector: 'app-profile',
   standalone: true,
-  imports: [ ProfileHeaderComponent, ProfileTabsComponent, ProfileGalleryComponent, SidebarComponent], // Asegúrate de importarlos
+  imports: [ ProfileHeaderComponent,ProfileVideoItemComponent,AppContainerComponent,CommonModule, MenuComponent, PromptComponent,ButtonComponent , ProfileTabsComponent, ProfileGalleryComponent, SidebarComponent, EncuestaItemComponent], // Asegúrate de importarlos
   templateUrl: './profile.component.html',
-  styleUrl: './profile.component.css'
+  styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent {
-
-
   galleryItems: string[] = [
     'assets/item1.jpg',
     'assets/item2.jpg',
     'assets/item3.jpg',
     'assets/item4.jpg',
   ];
-/*
-// Video inicial
-video = {
-  url: 'https://path-to-video.mp4', // Cambia por una URL válida
-  liked: false,
-  likes: 545600,
-  comments: ['Buen video', 'Interesante', '¿Dónde es esto?'],
-};
 
-newComment: string = '';
-showCommentBox: boolean = false;
+  activeTab: string = 'likes'; // Pestaña activa por defecto
+  videos = [
+    { videoUrl: 'assets/video.mp4' },
+    { videoUrl: 'assets/video.mp4' },
+    { videoUrl: 'assets/video.mp4' },
+    { videoUrl: 'assets/video1.mp4' },
+    { videoUrl: 'assets/video.mp4' },
+    // Agregar más videos según sea necesario
+  ];
+  encuestas = [
+    { 
+      titulo: 'Encuesta 1', 
+      descripcion: 'Descripción de la encuesta 1', 
+      imagenUrl: 'assets/Google.png' 
+    },
+    { 
+      titulo: 'Encuesta 2', 
+      descripcion: 'Descripción de la encuesta 2', 
+      imagenUrl: 'assets/path-to-image2.jpg' 
+    }
+  ];
 
-// Cambia el estado de "Me gusta"
-likeVideo(video: any) {
-  video.liked = !video.liked;
-  video.liked ? video.likes++ : video.likes--;
-}
-
-// Muestra u oculta el cuadro de comentarios
-toggleCommentBox() {
-  this.showCommentBox = !this.showCommentBox;
-}
-
-// Agrega un nuevo comentario
-addComment() {
-  if (this.newComment.trim()) {
-    this.video.comments.push(this.newComment);
-    this.newComment = '';
+  // Método que maneja el cambio de pestaña
+  onTabChange(tabId: string): void {
+    this.activeTab = tabId; // Actualiza la pestaña activa
   }
-}*/
+
+ 
 }

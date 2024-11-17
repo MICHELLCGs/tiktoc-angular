@@ -1,0 +1,53 @@
+.video-card {
+  position: relative;
+  width: 100%;
+  max-width: 400px; /* Ajusta el tamaño máximo de la tarjeta */
+  aspect-ratio: 9 / 16; /* Nueva forma de definir la relación de aspecto */
+  background: #1a1a1a;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* Asegura que el video cubra el contenedor */
+  cursor: pointer;
+}
+
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.play-button {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.play-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.1);
+}
+
+.play-icon {
+  color: white;
+  font-size: 24px;
+  margin-left: 4px;
+}

@@ -1,0 +1,13 @@
+<div class="video-card">
+    <video 
+      #videoPlayer
+      [src]="videoUrl"
+      (click)="togglePlay()">
+    </video>
+    <div class="video-overlay" *ngIf="!isPlaying">
+      <button class="play-button" (click)="togglePlay()">
+        <span class="play-icon">▶</span>
+      </button>
+    </div>
+  </div>
+  

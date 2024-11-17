@@ -1,0 +1,18 @@
+<!-- header-button.component.html -->
+<div class="header-boton">
+    <button *ngIf="!isAuthenticated" class="login-button header-boton" (click)="navigate()">
+      <img [src]="iconSrc" alt="Icono de inicio de sesión" class="icon" />
+      Inicia Sesión
+    </button>
+  
+    <div *ngIf="isAuthenticated" class="user-info header-boton">
+      <img 
+        [src]="profilePicture" 
+        (error)="onImageError()" 
+        alt="Foto de perfil" 
+        class="profile-picture" 
+      />
+      <span class="user-name">{{ userName }}</span>
+    </div>
+  </div>
+  

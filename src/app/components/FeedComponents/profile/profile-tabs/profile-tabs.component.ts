@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -11,6 +11,8 @@ import { CommonModule } from '@angular/common';
 export class ProfileTabsComponent {
   activeTab: string = 'likes'; // Tab activo por defecto
 
+  @Output() tabChange = new EventEmitter<string>(); // Evento que se emite cuando cambia la pestaña
+
   // Configuración de los tabs con rutas de íconos en assets/icons/
   tabs = [
     { id: 'likes', label: 'Me gusta', icon: 'assets/like.svg' },
@@ -20,7 +22,6 @@ export class ProfileTabsComponent {
   // Cambiar el tab activo
   selectTab(tabId: string) {
     this.activeTab = tabId;
+    this.tabChange.emit(tabId); // Emitir el evento con el ID de la pestaña seleccionada
   }
 }
-
-

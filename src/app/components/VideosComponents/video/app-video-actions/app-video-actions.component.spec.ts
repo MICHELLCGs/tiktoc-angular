@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NavbarComponent } from './navbar.component';
+import { AppVideoActionsComponent } from './app-video-actions.component';
 
-describe('NavbarComponent', () => {
-  let component: NavbarComponent;
-  let fixture: ComponentFixture<NavbarComponent>;
+describe('AppVideoActionsComponent', () => {
+  let component: AppVideoActionsComponent;
+  let fixture: ComponentFixture<AppVideoActionsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [NavbarComponent]
+      imports: [AppVideoActionsComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(NavbarComponent);
+    fixture = TestBed.createComponent(AppVideoActionsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

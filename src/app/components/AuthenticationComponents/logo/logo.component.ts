@@ -11,4 +11,5 @@ export class LogoComponent {
   @Input() src!: string; // Propiedad obligatoria para la ruta del logo
   @Input() alt?: string; // Texto alternativo opcional
   @Input() customClass?: string; // Clases CSS adicionales opcionales
+  @Input() width: string = '';  // Ancho de la imagen
 }

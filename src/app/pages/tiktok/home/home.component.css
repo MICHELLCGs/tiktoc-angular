@@ -1,55 +1,10 @@
 /* Contenedor general */
 .app-container {
+  display: flex;
+  flex-direction: column; /* Para que el encabezado esté en la parte superior */
+  height: 100vh; /* Para que ocupe toda la altura de la pantalla */
+}
+  .feed-container {
     display: flex;
-    flex-direction: column;
-    height: 100vh;
-    font-family: Arial, sans-serif;
-    background-color: #e5e5e5; /* Fondo gris oscuro */
-  }
-/* Contenido principal */
-.feed-container {
-    display: flex;
-    flex: 1;
-  }
-
-  .sidebar ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .sidebar ul li {
-    margin-bottom: 15px;
-  }
-  
-  .sidebar ul li a {
-    text-decoration: none;
-    font-size: 18px;
-    color: #000;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  
-  .sidebar ul li a span {
-    font-size: 20px;
-  }
-  
-  .sidebar ul li a.active {
-    font-weight: bold;
-    color: #ff5722;
-  }
-  
-  .sidebar p {
-    margin-top: 20px;
-    font-size: 14px;
-    color: #666;
-  }
-  
-  .sidebar .login-button {
-    margin-top: 10px;
-    padding: 10px 15px;
-    background-color: #ff5722;
-    color: #fff;
-    border: none;
-    cursor: pointer;
+    flex: 1; /* El contenido principal ocupará el espacio restante */
   }

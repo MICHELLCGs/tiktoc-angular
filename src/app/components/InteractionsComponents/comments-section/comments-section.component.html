@@ -1,0 +1,38 @@
+<div class="video-section">
+  <!-- Video -->
+  <div>
+    <video width="100%" controls>
+      <source [src]="video.url" type="video/mp4" />
+      Tu navegador no soporta videos HTML.
+    </video>
+    <p>{{ video.description }}</p>
+
+    <!-- Acciones -->
+    <div class="actions">
+      <button (click)="likeVideo(video)" class="like-button">
+        ❤️ {{ video.likes }}
+      </button>
+      <button (click)="toggleCommentBox()" class="comment-button">
+        💬 Comentarios
+      </button>
+    </div>
+  </div>
+
+  <!-- Contenedor de comentarios con scroll -->
+  <div >
+    <!-- Llamada al componente de detalles -->
+    <app-video-details 
+      [description]="'Simulated video description'" 
+      [platform]="'Simulated platform name'">
+    </app-video-details>
+    <div class="comments-container">
+      <!-- Comentarios -->
+      <app-comment-view
+        *ngFor="let comment of video.comments"
+        [username]="'Usuario'"
+        [message]="comment"
+      ></app-comment-view>
+      <app-comment-input (commentSent)="addComment($event)"></app-comment-input>
+  </div>
+  </div>
+</div>

@@ -1,0 +1,44 @@
+.header-boton{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+    border-radius: 5px;
+    padding: 10px 20px;
+    max-height: 40px;
+    cursor: pointer;
+    font-size: 16px;
+    color: white;
+    border: none;
+}
+
+.login-button {
+    background: linear-gradient(to right, #FF7A49, #FF004F);
+    transition: all 0.3s ease;
+  }
+.user-info{
+    background: linear-gradient(to right, #FF7A49, #FF004F);
+    transition: all 0.3s ease;
+}
+  
+  .login-button:hover, .user-info:hover{
+    transform: scale(1.05); /* Efecto de aumentar ligeramente el tamaño del botón */
+  }
+  
+  .login-button:focus {
+    outline: none; /* Eliminar el borde predeterminado al hacer focus */
+  }
+  
+  .icon {
+    margin-right: 10px; /* Espacio entre el ícono y el texto */
+    vertical-align: middle; /* Alineación vertical del ícono */
+    width: 25px;
+    height: 25px;
+  }
+
+  .user-info img{
+    width: 25px;
+    height: 25px;
+  }
+  
