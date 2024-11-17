@@ -1,0 +1,26 @@
+.central-content {
+    text-align: center;
+    margin: 10px 0;
+  }
+  
+  .coins {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .coin-image {
+    width: 30px;
+    margin-right: 5px;
+  }
+  
+  .coin-value {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffb400;
+  }
+  
+  .error-image {
+    width: 60px;
+  }
+  

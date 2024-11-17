@@ -1,0 +1,14 @@
+<div class="survey-container">
+  <!-- Pasar título -->
+  <app-survey-title [title]="surveyData.title"></app-survey-title>
+  
+  <!-- Pasar pregunta -->
+  <app-survey-question 
+  [question]="surveyData.question" 
+  [imageUrl]="surveyData.imageUrl">
+</app-survey-question>
+  <app-survey-options [options]="surveyData.options"></app-survey-options>
+  
+  <!-- Pasar texto del botón -->
+  <app-survey-button [label]="surveyData.buttonLabel"></app-survey-button>
+</div>

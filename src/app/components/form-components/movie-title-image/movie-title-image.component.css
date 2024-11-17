@@ -1,0 +1,11 @@
+.movie-title-image {
+    text-align: left;
+    padding: 10px 0px 40px 0px;
+  }
+  
+  .movie-image {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+  

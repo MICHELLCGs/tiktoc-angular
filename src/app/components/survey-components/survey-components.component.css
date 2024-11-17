@@ -1,0 +1,15 @@
+.survey-container {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    background-color: #f9f9f9;
+    border-radius: 10px;
+
+    margin-top: 20px; 
+    align-content: center;
+  }
+  
+  .survey-container > * {
+    margin-bottom: 30px; /* Asegúrate de que haya espacio entre los componentes */
+  }
+  
