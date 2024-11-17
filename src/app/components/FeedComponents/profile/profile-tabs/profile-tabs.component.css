@@ -1,0 +1,28 @@
+.tabs {
+    display: flex;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .tabs button {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px; /* Espacio entre el ícono y el texto */
+  }
+  
+  .tabs button img.tab-icon {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .tabs button.active {
+    border-bottom: 2px solid red;
+    font-weight: bold;
+  }
+  
+  

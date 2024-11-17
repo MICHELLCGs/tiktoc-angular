@@ -1,0 +1,50 @@
+/* Componente enlace */
+.menu-item {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Transición suave para cambios */
+  padding: 10px 0;
+  text-decoration: none;
+}
+
+
+
+.menu-icon {
+  width: 24px;
+  margin-right: 10px;
+}
+
+/* Cambia el color del SVG al hacer hover */
+
+.menu-item span {
+  margin-left: 8px;
+  color: black; /* Color inicial del texto */
+  transition: color 0.3s ease; /* Transición suave para el texto */
+  font-size: 24;
+  
+}
+
+.menu-item:hover span {
+  color: #FF7A49;
+}
+
+.menu-item.active span{
+  color: #FF7A49;
+  font-weight: 600;
+}
+
+.menu-item img {
+  width: 24px;
+  height: 24px;
+  filter: grayscale(100%) brightness(0) contrast(100%); /* Empieza en gris */
+  transition: filter 0.3s ease; /* Transición solo para el filtro */
+}
+
+.menu-item:hover img{
+  filter: none; /* Quita el filtro cuando el cursor esté encima */
+}
+
+.menu-item.active img{
+  filter: none;
+}
