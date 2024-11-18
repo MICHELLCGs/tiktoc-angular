@@ -1,10 +1,9 @@
 :host {
-    position: absolute; /* Permite que ocupe todo el contenedor */
-    top: 0;
-    left: 0;
-    width: 100%; /* Abarca todo el ancho */
-    height: 100%; /* Ajusta dinámicamente con el contenido */
-    z-index: -1; /* Coloca detrás del contenido */
-    background: linear-gradient(to right, #FF7A49, #FF004F);
-  }
-  
+  position: absolute; /* Permite que ocupe todo el contenedor */
+  top: 0;
+  left: 0;
+  width: 100%; /* Abarca todo el ancho */
+  height: 100%; /* Ajusta dinámicamente con el contenido */
+  z-index: -1; /* Coloca detrás del contenido */
+  background: linear-gradient(to right, #FF7A49, #FF004F);
+}

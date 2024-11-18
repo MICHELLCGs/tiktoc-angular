@@ -17,7 +17,7 @@
 .comments-container {
   display: flex;
   flex-direction: column; /* Le permite crecer para ocupar el espacio restante */
-  height: 600px; /* Define la altura máxima para el contenedor de comentarios */
+  height: 500px; /* Define la altura máxima para el contenedor de comentarios */
   overflow-y: auto; /* Activa el desplazamiento vertical si el contenido supera el max-height */
   padding: 10px;
   background-color: #f9f9f9;

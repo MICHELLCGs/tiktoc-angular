@@ -1,4 +1,5 @@
-.actions {
+  /* Contenedor de acciones */
+  .actions-container {
     display: flex;
     align-items: center;
     gap: 16px;
@@ -7,7 +8,7 @@
   .action {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items:start;
     background: none;
     border: none;
     cursor: pointer;
@@ -22,6 +23,6 @@
   
   .action span {
     font-size: 14px;
-    color: white;
+    color: black;
   }
   

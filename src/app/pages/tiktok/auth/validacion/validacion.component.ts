@@ -48,7 +48,7 @@ onSubmit() {
       alert('Código verificado');
       this.errorMessage = ''; // Limpia el mensaje de error
       // Redirigir al feed si la verificación es correcta
-      this.router.navigate(['/feed']);
+      this.router.navigate(['/home']);
     } else {
       alert('Código incorrecto')
       this.errorMessage = 'Código de verificación incorrecto.';

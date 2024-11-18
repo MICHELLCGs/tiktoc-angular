@@ -1,5 +1,5 @@
 <div class="video-section">
-  <!-- Video   PRUEBA-->
+  <!-- Video -->
   <div>
     <video width="100%" controls>
       <source [src]="video.url" type="video/mp4" />
@@ -7,36 +7,31 @@
     </video>
     <p>{{ video.description }}</p>
 
-    <!-- Acciones PRUEBA -->
+    <!-- Acciones -->
     <div class="actions">
       <button (click)="likeVideo(video)" class="like-button">
         ❤️ {{ video.likes }}
       </button>
-      <button (click)="toggleCommentBox()" class="comment-button">
-        💬 Comentarios
-      </button>
+      <app-action-button 
+        [icon]="'commentIcon.png'"
+        [filledIcon]="'commentFilledIcon.png'"
+        [label]="'Comentarios'"
+        [count]="commentCount"  
+        (actionClicked)="toggleCommentBox()">
+      </app-action-button>
     </div>
   </div>
 
-  
   <div class="details-container">
-    
-    <!-- Llamada al componente de detalles -->
-    <app-video-details 
-        [description]="'Este es un video informativo'"
-        [tags]="['educación', 'video', 'tutorial','educación', 'video', 'tutorial']">
-      </app-video-details>
+    <app-video-details [description]="'Este es un video informativo'" [tags]="['educación', 'video', 'tutorial']"></app-video-details>
     <app-video-actions></app-video-actions>
+
     <div class="comments-container">
       <!-- Comentarios -->
-       <div class="comments-view">
-        <app-comment-view
-          *ngFor="let comment of video.comments"
-          [username]="'Usuario'"
-          [message]="comment"
-        ></app-comment-view>
-    </div>
+      <div class="comments-view">
+        <app-comment-view *ngFor="let comment of video.comments" [username]="'Usuario'" [message]="comment"></app-comment-view>
+      </div>
       <app-comment-input (commentSent)="addComment($event)"></app-comment-input>
-  </div>
+    </div>
   </div>
 </div>

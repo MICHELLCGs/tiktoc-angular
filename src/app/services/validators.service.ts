@@ -34,14 +34,19 @@ export class ValidatorsService {
   isDateOfBirthValid(day: number | null, month: number | null, year: number | null): boolean {
     if (day === null || month === null || year === null) return false;
 
-    const date = new Date(`${year}-${month}-${day}`);
-    return (
-      !isNaN(date.getTime()) &&
-      date.getFullYear() === year &&
-      month >= 1 &&
-      month <= 12 &&
-      day >= 1 &&
-      day <= 31
-    );
+    if (month < 1 || month > 12 || day < 1) return false;
+
+    const daysInMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+    if (day > daysInMonth[month - 1]) return false;
+
+    // Verificar año bisiesto para el mes de febrero
+    if (month === 2 && year % 4 === 0) {
+      if (year % 100 !== 0 || year % 400 === 0) {
+        if (day > 29) return false;
+      } else if (day > 28) return false;
+    }
+
+    const currentYear = new Date().getFullYear();
+    return year >= 1900 && year <= currentYear;
   }
 }

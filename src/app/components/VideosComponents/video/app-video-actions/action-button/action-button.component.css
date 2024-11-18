@@ -1,0 +1,10 @@
+.action{
+    border: none;
+    background-color: transparent;
+    
+}
+.action img{
+    width: 24px;
+    height: 24px;
+    margin-bottom: 4px;
+}

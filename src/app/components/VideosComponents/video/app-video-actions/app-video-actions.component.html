@@ -1,14 +1,27 @@
-<div class="actions">
-    <button (click)="like()" class="action">
-      <img src="assets/icons/heart.svg" alt="Me gusta" />
-      <span>{{ likes }}</span>
-    </button>
-    <button (click)="comment()" class="action">
-      <img src="assets/icons/comment.svg" alt="Comentarios" />
-      <span>{{ comments }}</span>
-    </button>
-    <button (click)="share()" class="action">
-      <img src="assets/icons/share.svg" alt="Compartir" />
-    </button>
-</div>
+<div class="actions-container">
+  <app-action-button 
+    [icon]="'assets/Heart.svg'"
+    [filledIcon]="'assets/HeartFill.svg'"
+    [label]="'Me gusta'"
+    [count]="likes"
+    [isFilled]="isLiked"
+    (actionClicked)="toggleLike()">
+  </app-action-button>
   
+  <app-action-button 
+        [icon]="'assets/Comment.svg'"
+        [filledIcon]="'commentFilledIcon.png'"
+        [label]="'Comentarios'"
+        [count]="commentCount"  
+        (actionClicked)="toggleCommentBox()">
+      </app-action-button>
+  
+  <app-action-button 
+    [icon]="'assets/Share.svg'"
+    [filledIcon]="'assets/Share.svg'"
+    [label]="'Compartir'"
+    [count]="shares"
+    [isFilled]="false" 
+    (actionClicked)="share()">
+  </app-action-button>
+</div>
