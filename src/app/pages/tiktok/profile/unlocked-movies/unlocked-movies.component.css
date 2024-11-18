@@ -1,0 +1,73 @@
+.unlocked-movies-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.unlocked-movies-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.back-button {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  background-color: #d3d3d3;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin: 0 30px;
+}
+
+.arrow {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-top: 2px solid #333;
+  border-right: 2px solid #333;
+  transform: rotate(-135deg);
+}
+
+.movies-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap:6rem;
+  width: 90%;
+  padding: 0 1rem;
+  margin-left: 6.5rem;
+  overflow: hidden;
+}
+
+.movie-item-container {
+  display: flex;
+  align-items: center; /* Centra el botón verticalmente */
+  gap: 1rem; /* Espacio entre los componentes */
+}
+
+@media (max-width: 768px) {
+.movies-grid {
+  grid-template-columns: 1fr;
+}
+
+.movie-item-container {
+  flex-direction: column; /* Apilar los componentes de película verticalmente en pantallas pequeñas */
+  align-items: flex-start;
+}
+}
+
+.unlocked-movies-container {
+  position: relative;
+}
+
+body.modal-open {
+  overflow: hidden;
+}

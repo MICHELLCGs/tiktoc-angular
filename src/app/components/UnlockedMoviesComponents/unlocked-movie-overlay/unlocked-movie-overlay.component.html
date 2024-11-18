@@ -1,0 +1,17 @@
+<div class="overlay" *ngIf="movie">
+  <div class="modal-content">
+    <!-- Botón para cerrar -->
+    <button class="close-button" (click)="hide()">x</button>
+
+    <h2>¿Dónde la puedo ver?</h2>
+    <p class="subtitle">¡Relájate y disfruta de tus películas favoritas en las mejores plataformas!</p>
+
+    <div class="streaming-services">
+      <app-unlocked-overlay-logos 
+        *ngFor="let service of streamingServices"
+        [imagePath]="service.imagePath"
+        [text]="service.text">
+      </app-unlocked-overlay-logos>
+    </div>
+  </div>
+</div>

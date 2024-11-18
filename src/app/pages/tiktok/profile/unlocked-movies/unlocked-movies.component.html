@@ -1,0 +1,21 @@
+<div class="unlocked-movies-container">
+    <div class="header-container">
+        <div class="back-button">
+            <span class="arrow"></span>
+        </div>
+        <h2 class="unlocked-movies-title">Películas Desbloqueadas</h2>
+    </div>
+    
+    <div class="movies-grid">
+        <div class="movie-item-container" *ngFor="let movie of unlockedMovies">
+          <app-unlocked-movie-item [movie]="movie"></app-unlocked-movie-item>
+          <app-unlocked-movies-button (movieClicked)="onMovieClicked(movie)"></app-unlocked-movies-button>
+        </div>
+      </div>
+      
+      <app-unlocked-movie-overlay 
+        *ngIf="selectedMovie" 
+        [movie]="selectedMovie" 
+        (closeOverlay)="onCloseOverlay()">
+      </app-unlocked-movie-overlay>
+</div>

@@ -1,0 +1,16 @@
+.unlocked-movie-btn {
+  width: fit-content;
+  height: fit-content;
+  padding: 0.75rem 2.5rem;
+  background-color: #e85d35;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.unlocked-movie-btn:hover {
+  background-color: #f06b45;
+}

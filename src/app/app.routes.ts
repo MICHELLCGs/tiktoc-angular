@@ -7,6 +7,7 @@ import { ValidacionComponent} from './pages/tiktok/auth/validacion/validacion.co
 import { HomeComponent } from './pages/tiktok/home/home.component';
 import { ProfileComponent } from './pages/tiktok/profile/profile.component';
 import { CommentsComponent } from './pages/tiktok/comments/comments.component';
+import { UnlockedMoviesComponent } from './pages/tiktok/profile/unlocked-movies/unlocked-movies.component';
 
 export const routes: Routes = [
   { path: 'register', component: RegistermainComponent },
@@ -16,7 +17,8 @@ export const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'validacion', component: ValidacionComponent },
   { path: 'profile', component: ProfileComponent },
-  { path: 'comments/:id', component: CommentsComponent } // Nueva ruta con parámetro `id`
+  { path: 'comments/:id', component: CommentsComponent }, // Nueva ruta con parámetro `id`
+  { path: 'peliculas', component: UnlockedMoviesComponent } 
 
 
 ];
