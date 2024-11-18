@@ -1,8 +1,14 @@
 <div class="details">
-    <p class="description">{{ description }}</p>
-    <div class="platform">
-      <img src="assets/link.svg" alt="Plataforma" />
-      <span>{{ platform }}</span>
+  <div class="description">
+    <p>{{ description }}</p>
+    <div class="tags">
+      <span *ngFor="let tag of tags">#{{ tag }} </span>
     </div>
   </div>
-  
+  <div class="links">
+    <app-platform-link [link]="'https://example.com'" [isActivated]="true">
+    </app-platform-link>
+    <app-platform-link [link]="'https://example.com'" [isActivated]="false">
+    </app-platform-link>
+  </div>
+</div>

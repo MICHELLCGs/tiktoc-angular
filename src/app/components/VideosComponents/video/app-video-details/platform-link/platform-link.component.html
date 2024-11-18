@@ -1,0 +1,20 @@
+<div class="platform-container">
+    <!-- Link con activación/desactivación -->
+    <a *ngIf="isActivated; else blockedOverlay" [href]="link" class="platform-link" target="_blank">
+      <img src="assets/link.svg" alt="Plataforma" />
+      <span>Plataforma</span>
+    </a>
+  
+    <!-- Bloqueo de enlace con mensaje de desbloqueo -->
+    <ng-template #blockedOverlay>
+      <div class="platform-blocked">
+        <img class="link-img" src="assets/link.svg" alt="Plataforma" />
+        <span>Plataforma</span>
+        <div class="overlay">
+          <img src="assets/InfoCircleFill.svg" alt="Desbloquear icono" />
+          <p>Desbloquear link</p>
+        </div>
+      </div>
+    </ng-template>
+  </div>
+  

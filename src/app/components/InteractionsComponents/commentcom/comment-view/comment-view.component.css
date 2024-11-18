@@ -1,7 +1,7 @@
-/* Estilos del contenedor de comentarios */
+/* Contenedor de comentarios */
 .comments-container {
-  max-height: 100%; /* Limita la altura al tamaño de la ventana */
-  overflow-y: auto; /* Añade scroll vertical cuando el contenido excede la altura */
+  flex-grow: 1; /* Ocupa el espacio restante */
+  overflow-y: auto; /* Activa el desplazamiento vertical si es necesario */
   padding: 10px;
   background-color: #f9f9f9;
   border-radius: 10px;
