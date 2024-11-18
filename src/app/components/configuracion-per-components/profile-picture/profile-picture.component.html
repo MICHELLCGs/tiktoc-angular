@@ -1,0 +1,8 @@
+<div class="profile-container">
+    <img [src]="profilePicture || 'assets/sad-face.png'" alt="Foto de perfil" class="profile-picture" />
+    <label class="edit-icon">
+      <input type="file" accept="image/*" (change)="onFileSelected($event)" hidden />
+      <img src="assets/pencil.svg" alt="Editar" />
+    </label>
+  </div>
+  

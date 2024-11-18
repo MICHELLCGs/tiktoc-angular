@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { AppContainerComponent } from '../../../components/FeedComponents/app-container/app-container.component';
+import { ConfiguracionPerComponentsComponent } from '../../../components/configuracion-per-components/configuracion-per-components.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [AppContainerComponent,CommonModule, FormsModule],
+  imports: [AppContainerComponent,CommonModule, FormsModule, ConfiguracionPerComponentsComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })

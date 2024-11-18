@@ -1,0 +1,11 @@
+.settings-container {
+    max-width: 700px;
+    margin: 0px 0px 0px 20px;
+    text-align: left;
+  }
+  
+  .config-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  

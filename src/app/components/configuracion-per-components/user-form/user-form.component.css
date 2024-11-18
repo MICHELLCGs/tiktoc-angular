@@ -1,0 +1,71 @@
+
+  
+  .form-control {
+    width: 100%;
+    padding: 10px 30px;
+    border: 1px solid #7F7F7F;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 500;
+    transition: border-color 0.2s;
+    box-sizing: border-box;
+    outline: none;
+    color: #333;
+  }
+  
+  .input-group {
+    margin: 25px;
+    padding: 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    border-radius: 4px;
+    overflow: hidden;
+    gap: 0.5rem;
+  }
+  
+  .input-group input,
+  .input-group select {
+    width: 100%;
+    padding: 10px 30px;
+    border: 1px solid #7F7F7F;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 500;
+    transition: border-color 0.2s;
+    box-sizing: border-box;
+    outline: none;
+    color: #333;
+  }
+  
+  .input-group label {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .date-picker label {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  .date-fields {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .dob-container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: space-between;
+  }
+  
+  .error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 0;
+  }
+  
