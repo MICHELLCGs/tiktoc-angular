@@ -1,17 +1,18 @@
 <div class="video-container">
     <app-video-player [videoUrl]="videoUrl"></app-video-player>
-    <app-video-actions 
-      [likes]="likes" 
-      [comments]="comments" 
-      (onLike)="handleLike()" 
-      (onComment)="handleComment()" 
-      (onShare)="handleShare()">
-    </app-video-actions>
-    <app-video-details 
-      [description]="description" 
-      [platform]="platform">
-    </app-video-details>
-  </div>
+    <div>
+      <app-video-actions 
+        [likes]="likes" 
+        [comments]="comments" 
+        (onLike)="handleLike()" 
+        (onComment)="handleComment()" 
+        (onShare)="handleShare()">
+      </app-video-actions>
+      <app-video-details 
+        [description]="description" >
+      </app-video-details>
+    </div>
+</div>
   
   
   

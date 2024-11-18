@@ -1,9 +1,52 @@
-/* Contenedor */
+/* Contenedor principal */
 .video-section {
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100%; /* Ocupa toda la altura de la pantalla */
+  gap: 50px; /* AQUI ESTA EL ESPACIO DE VIDEO */
+  height: 100%;
+}
+
+/* Contenedor de detalles */
+.details-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Contenedor de comentarios */
+.comments-container {
+  display: flex;
+  flex-direction: column; /* Le permite crecer para ocupar el espacio restante */
+  height: 600px; /* Define la altura máxima para el contenedor de comentarios */
+  overflow-y: auto; /* Activa el desplazamiento vertical si el contenido supera el max-height */
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.comments-view {
+  display: flex;
+  flex-grow: 1; /* Ocupa el espacio restante en la parte superior */
+  overflow-y: auto; /* Activa el desplazamiento si hay muchos comentarios */
+  margin-bottom: 10px; /* Espacio entre los comentarios y el input */
+  flex-direction: column; /* Alinea el contenido en columna */
+  justify-content: flex-start; /* Alinea el contenido desde la parte superior */
+  height: 100%; /* Ocupa el 100% de la altura del contenedor padre */
+}
+
+
+app-comment-input {
+  flex-shrink: 0; /* Evita que el input cambie de tamaño */
+  background-color: #ffffff;
+  border-top: 1px solid #ddd;
+}
+
+app-video-actions{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
 }
 
 /* Simulacion de componente video */
@@ -47,16 +90,3 @@
     background-color: #e0474e;
   }
 
-  /* Comentarios */
-  
-  .comments-container {
-    max-height: 300px; /* Define una altura máxima para los comentarios */
-    overflow-y: auto; /* Activa el desplazamiento vertical */
-    width: 100%;
-    padding: 10px;
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    margin-top: 15px;
-  }
-  

@@ -1,0 +1,25 @@
+/* Plataforma y Links*/
+.details{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.links{
+    display: flex;
+    flex-direction: column;
+}
+.description p, .description span{
+    color: #7E7E7E;
+    font-size: 16;
+    font-weight: 400;
+}
+.description{
+    
+    display: flex;
+    flex-direction: column;
+}
+.description p{
+    margin: 0px;
+    padding: 0px;
+}
+

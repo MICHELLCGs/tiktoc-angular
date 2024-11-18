@@ -4,10 +4,11 @@ import { FormsModule } from '@angular/forms';
 import { CommentViewComponent } from '../commentcom/comment-view/comment-view.component';
 import { CommentInputComponent } from '../commentcom/comment-input/comment-input.component';
 import { VideoDetailsComponent } from '../../VideosComponents/video/app-video-details/app-video-details.component';
+import { VideoActionsComponent } from '../../VideosComponents/video/app-video-actions/app-video-actions.component';
 @Component({
   selector: 'app-comments-section',
   standalone: true,
-  imports: [VideoDetailsComponent,CommonModule, FormsModule, CommentViewComponent, CommentInputComponent],
+  imports: [VideoActionsComponent, VideoDetailsComponent,CommonModule, FormsModule, CommentViewComponent, CommentInputComponent],
   templateUrl: './comments-section.component.html',
   styleUrls: ['./comments-section.component.css'],
 })

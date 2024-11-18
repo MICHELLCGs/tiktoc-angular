@@ -1,0 +1,70 @@
+.platform-container {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+
+  
+  .platform-link,
+  .platform-blocked {
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    color: #7E7E7E;
+    text-decoration: none;
+    font-size: 16;
+  }
+
+  
+  .platform-link img,
+  .platform-blocked img {
+    margin-right: 8px;
+  }
+  
+  .platform-link:hover {
+    color: #676464;
+    border: 1px solid #676464;
+    border-radius: 5px;
+  }
+  
+  /* Enlace bloqueado */
+  .platform-blocked {
+    cursor: not-allowed;
+    position: relative;
+    opacity: 0.5; /* Enlace bloqueado opaco */
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding-right: 0px;
+    
+  }
+  .platform-blocked span, .platform-blocked .link-img{
+    filter: blur(2px);
+    backdrop-filter: blur(100);
+  }
+  
+  .overlay {
+    margin: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    background: rgba(140, 140, 140, 0.5); /* Fondo oscuro semitransparente */
+    color: white;
+    font-size: 14px;
+    border-radius: 4px;
+    text-align: left; /* Alineación a la izquierda */
+    pointer-events: none; /* Bloquea la interacción con el enlace */
+     
+  }
+  
+  .overlay img {
+    width: 16px;
+    height: 16px;
+    padding-left: 20px;
+  }
+  
