@@ -1,0 +1,13 @@
+<div class="central-content">
+    <ng-container *ngIf="content.type === 'coins'; else imageTemplate">
+      <p class="reward">Ganaste:</p>
+      <div class="coins">
+        <img src="assets/coin.png" alt="Moneda" class="coin-image" />
+        <span class="coin-value">{{ content.value }}</span>
+      </div>
+    </ng-container>
+    <ng-template #imageTemplate>
+      <img [src]="content.imageUrl" alt="Error" class="error-image" />
+    </ng-template>
+  </div>
+  
