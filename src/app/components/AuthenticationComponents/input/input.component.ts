@@ -1,7 +1,7 @@
 import {Component,Input,Output,EventEmitter,forwardRef,} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {ControlValueAccessor,NG_VALUE_ACCESSOR,} from '@angular/forms';
-import { CountryCodeSelectorComponent } from '../country-code-selector/country-code-selector.component';
+import { CountryCodeSelectorComponent } from './country-code-selector/country-code-selector.component';
 
 
 @Component({
@@ -14,32 +14,32 @@ import { CountryCodeSelectorComponent } from '../country-code-selector/country-c
     {
       provide: NG_VALUE_ACCESSOR,
       useExisting: forwardRef(() => InputComponent),
-      multi: true, // Permite registrar múltiples proveedores
+      multi: true,
     },
   ],
 })
 export class InputComponent implements ControlValueAccessor {
-  @Input() label: string = ''; // Etiqueta del input
-  @Input() type: string = 'text'; // Tipo de input (text, email, password, etc.)
-  @Input() name: string = ''; // Nombre del input
-  @Input() placeholder: string = ''; // Placeholder del input
-  @Input() errorMessage: string = ''; // Mensaje de error
-  @Input() isInvalid: boolean = false; // Si es inválido
-  @Input() touched: boolean = false; // Si fue tocado
-  @Input() showCountrySelector: boolean = false; // Propiedad para mostrar el selector
-  @Input() selectedCountryCode: string = '+51'; // Código de país seleccionado
-  @Output() valueChange: EventEmitter<string> = new EventEmitter<string>(); // Emitir cambios al valor
+  @Input() label: string = ''; 
+  @Input() type: string = 'text';
+  @Input() name: string = ''; 
+  @Input() placeholder: string = ''; 
+  @Input() errorMessage: string = ''; 
+  @Input() isInvalid: boolean = false; 
+  @Input() touched: boolean = false; 
+  @Input() showCountrySelector: boolean = false; 
+  @Input() selectedCountryCode: string = '+51'; 
+  @Output() valueChange: EventEmitter<string> = new EventEmitter<string>(); 
 
 
-  value: string = ''; // Valor interno del input
-  onChange = (value: string) => { }; // Función para manejar cambios
-  onTouched = () => { }; // Función para marcar como "tocado"
+  value: string = ''; 
+  onChange = (value: string) => { };
+  onTouched = () => { }; 
 
   onInput(event: Event): void {
     const target = event.target as HTMLInputElement;
     this.value = target.value;
-    this.onChange(this.value); // Notifica el cambio al modelo
-    this.valueChange.emit(this.value); // Notifica el cambio al padre
+    this.onChange(this.value); 
+    this.valueChange.emit(this.value);
   }
 
   updateValue(phoneNumber: string): void {
@@ -52,22 +52,22 @@ export class InputComponent implements ControlValueAccessor {
 
   onCountryCodeChange(countryCode: string): void {
     this.selectedCountryCode = countryCode;
-    this.updateValue(this.value.split(' ').slice(1).join(' ')); // Mantén el número actual
+    this.updateValue(this.value.split(' ').slice(1).join(' ')); 
   }
 
   writeValue(value: string): void {
-    this.value = value || ''; // Actualiza el valor desde el modelo
+    this.value = value || ''; 
   }
 
   registerOnChange(fn: any): void {
-    this.onChange = fn; // Registra el callback para cambios
+    this.onChange = fn;
   }
 
   registerOnTouched(fn: any): void {
-    this.onTouched = fn; // Registra el callback para "tocado"
+    this.onTouched = fn;
   }
 
   setDisabledState?(isDisabled: boolean): void {
-    // Lógica opcional para deshabilitar el componente
+    
   }
 }

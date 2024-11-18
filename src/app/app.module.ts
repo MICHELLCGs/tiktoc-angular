@@ -22,7 +22,7 @@ import { RegistermainComponent } from './pages/tiktok/auth/registermain/register
     BrowserModule,
     FormsModule, // Añade FormsModule aquí
     CommonModule, 
-    ReactiveFormsModule, 
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],

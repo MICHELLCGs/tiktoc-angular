@@ -1,0 +1,9 @@
+<div class="search-bar">
+    <input 
+      type="text" 
+      placeholder="Búsqueda" 
+      [(ngModel)]="searchText" 
+    />
+    <button class="button-icon"><img [src]="icon" alt="{{ label }}" class="search-bar-icon" (click)="onSearch()"/></button>
+</div>
+  

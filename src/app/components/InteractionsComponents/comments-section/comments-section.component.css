@@ -1,0 +1,62 @@
+/* Contenedor */
+.video-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* Ocupa toda la altura de la pantalla */
+}
+
+/* Simulacion de componente video */
+
+.video-section video {
+  width: 400px; /* Ancho de video similar al de TikTok */
+  height: 700px; /* Alto de video similar al de TikTok */
+  border-radius: 10px; /* Bordes redondeados para darle un estilo */
+  object-fit: cover; /* Recorta para ajustar al contenedor */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); /* Sombra para resaltar el video */
+}
+
+  
+  .video-section p {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  /* Simulacion de acciones */
+
+  .actions {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .like-button,
+  .comment-button {
+    padding: 10px 20px;
+    background-color: #ff5a5f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .like-button:hover,
+  .comment-button:hover {
+    background-color: #e0474e;
+  }
+
+  /* Comentarios */
+  
+  .comments-container {
+    max-height: 300px; /* Define una altura máxima para los comentarios */
+    overflow-y: auto; /* Activa el desplazamiento vertical */
+    width: 100%;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-top: 15px;
+  }
+  

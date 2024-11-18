@@ -1,0 +1,94 @@
+.encuesta-container {
+  width: 100%;
+  min-height: 300px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.encuesta {
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.encuesta.active {
+  display: block;
+}
+
+.titulo-superior {
+  color: #ff4757;
+  font-size: 16px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.encuesta-content {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.image-container {
+  width: 250px;
+  height: 250px;
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.text-content {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.text-content p {
+  color: #333;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.start-button {
+  background: linear-gradient(135deg, #FF004F, #FF7A49); /* Gradiente de color */
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  width: fit-content;
+  transition: background-color 0.3s ease;
+  margin: 0 auto; /* Centra el botón en su contenedor */
+  display: block; /* Asegura que el botón ocupe el ancho necesario para centrarse */
+}
+
+.start-button:hover {
+  background: linear-gradient(135deg, #FF6B81, #FF7A49); /* Cambio del gradiente en hover */
+}
+
+/* Ajustes para móviles */
+@media (max-width: 768px) {
+  .encuesta-content {
+      grid-template-columns: 1fr;
+      gap: 20px;
+  }
+
+  .image-container {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 1;
+  }
+}
